@@ -60,4 +60,15 @@ public class CircularBufferTest {
         assertFalse("Buffer is NOT EMPTY",result);
     }
 
+    @Test
+    public void set_size_of_array(){
+        CircularBuffer cb = new CircularBuffer();
+        int newarraysize = 12;
+        cb.setSize(newarraysize);
+        for(int i=0; i<12; i++) {
+            cb.writeData("A"+i);
+        }
+        boolean result = cb.isFull();
+        assertTrue("Buffer is FULL",result);
+    }
 }

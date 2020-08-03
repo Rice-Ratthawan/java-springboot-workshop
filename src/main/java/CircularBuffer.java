@@ -31,4 +31,7 @@ public class CircularBuffer {
         return this.buffer[readPointer++];
     }
 
+    public void setSize(int newarraysize) {
+        this.buffer = new String [newarraysize];
+    }
 }
