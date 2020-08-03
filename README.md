@@ -22,7 +22,7 @@
 * TC01 => create_new_buffer_should_empty
 * TC02 => create_new_buffer_with_default_size_should_10
 * TC03 => write_A_B_to_buffer_should_read_A_B_from_buffer
-* TC04 => replace_A_to_B_when_buffer_is_full <span style="color:red">**FAIL**</span>
+* TC04 => replace_A_to_B_when_buffer_is_full **FAIL!**
 * TC05 => check_array_full
 * TC06 => check_array_not_empty
-* TC07 => set_size_of_array <span style="color:red">**FAIL**</span>
+* TC07 => set_size_of_array **FAIL!**
