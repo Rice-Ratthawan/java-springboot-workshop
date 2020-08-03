@@ -51,7 +51,7 @@ public class CircularBufferTest {
     }
 
     @Test
-    public void check_array_empty(){
+    public void check_array_not_empty(){
         CircularBuffer cb = new CircularBuffer();
         cb.writeData("A");
         cb.writeData("B");
