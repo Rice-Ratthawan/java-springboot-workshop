@@ -49,4 +49,15 @@ public class CircularBufferTest {
         boolean result = cb.isFull();
         assertTrue("Buffer is FULL",result);
     }
+
+    @Test
+    public void check_array_empty(){
+        CircularBuffer cb = new CircularBuffer();
+        cb.writeData("A");
+        cb.writeData("B");
+        cb.writeData("C");
+        boolean result = cb.isEmpty();
+        assertFalse("Buffer is NOT EMPTY",result);
+    }
+
 }
