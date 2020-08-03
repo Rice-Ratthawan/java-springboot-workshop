@@ -39,4 +39,14 @@ public class CircularBufferTest {
         cb.writeData("B");
         assertEquals("B", cb.readData());
     }
+
+    @Test
+    public void check_array_full(){
+        CircularBuffer cb = new CircularBuffer();
+        for(int i=0; i<10; i++) {
+            cb.writeData("A"+i);
+        }
+        boolean result = cb.isFull();
+        assertTrue("Buffer is FULL",result);
+    }
 }
