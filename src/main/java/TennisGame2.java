@@ -22,10 +22,12 @@ public class TennisGame2 {
         }
 
         //Winner
-        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2) {
+        boolean player1Win = player1Point >= 4 && player2Point >= 0 && (player1Point - player2Point) >= 2;
+        if (player1Win) {
             return "Win for " + player1Name;
         }
-        else if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2) {
+        boolean player2Win = player2Point >= 4 && player1Point >= 0 && (player2Point - player1Point) >= 2;
+        if (player2Win) {
             return "Win for " + player2Name;
         }
 

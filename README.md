@@ -29,3 +29,6 @@
 ### List of refactor
 * Replace Hard Code
 * Use data struceture:array to reduce duplication
+* Improve Advantage
+* Change if to if-else
+* Introduce variables
