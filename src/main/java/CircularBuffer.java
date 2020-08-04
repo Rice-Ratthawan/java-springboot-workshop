@@ -8,30 +8,27 @@ public class CircularBuffer {
 
     //Default constructure
     public CircularBuffer() {
-        this.buffer = new String [10];
+        this(10);
+    }
+    //Overload constructure
+    public CircularBuffer(int size) {
+        this.bufferSize = size;
+        this.buffer = new String[bufferSize];
     }
 
     public boolean isEmpty() {
-        //buffer should have 10 space
-        return bufferSize == 10;
+        return readPointer == writePointer;
     }
 
     public void writeData(String input) {
-        //receive input then decrease space
-        bufferSize--;
         this.buffer[writePointer++] = input;
     }
 
     public boolean isFull() {
-        //check from bufferSize if =0 so now it's full
-        return bufferSize == 0;
+        return writePointer >= bufferSize;
     }
 
     public String readData() {
         return this.buffer[readPointer++];
-    }
-
-    public void setSize(int newarraysize) {
-        this.buffer = new String [newarraysize];
     }
 }
