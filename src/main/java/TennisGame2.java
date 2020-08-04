@@ -97,9 +97,9 @@ public class TennisGame2 {
 //            score = "Win for player2";
 //        }
         switch(score){
-            case 1: score = "Win for player1";
+            case "Win for player1": if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
             break;
-            case 2: score = "Win for player2";
+            case "Win for player2": if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
             break;
         }
 
