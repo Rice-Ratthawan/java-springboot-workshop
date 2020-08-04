@@ -13,18 +13,12 @@ public class TennisGame2 {
     public String getScore(){
         String[] textScores = {"Love","Fifteen","Thirty","Forty"};
 
-        // Same score in first 3 times
-            // Refactor: introduce variable
-        boolean sameScore = player1Point == player2Point && player1Point < 3;
-        if (sameScore) {
-            return textScores[player1Point]+"-All";
+        // Advantage
+        if (player1Point > player2Point && player2Point >= 3 && (player1Point-player2Point)==1) {
+            return "Advantage " + player1Name;
         }
-
-        //Deuce Case
-            // Refactor: introduce variable
-        boolean isDeuce = player1Point == player2Point && player1Point >= 3;
-        if (isDeuce) {
-            return "Deuce";
+        if (player2Point > player1Point && player1Point >= 3 && (player2Point-player1Point)==1) {
+            return "Advantage " + player2Name;
         }
 
         //Winner
@@ -35,12 +29,18 @@ public class TennisGame2 {
             return "Win for " + player2Name;
         }
 
-        // Advantage
-        if (player1Point > player2Point && player2Point >= 3) {
-            return "Advantage " + player1Name;
+        //Deuce Case
+            // Refactor: introduce variable
+        boolean isDeuce = player1Point == player2Point && player1Point >= 3;
+        if (isDeuce) {
+            return "Deuce";
         }
-        if (player2Point > player1Point && player1Point >= 3) {
-            return "Advantage " + player2Name;
+
+        // Same score in first 3 times
+            // Refactor: introduce variable
+        boolean sameScore = player1Point == player2Point && player1Point < 3;
+        if (sameScore) {
+            return textScores[player1Point]+"-All";
         }
 
         //Normal Case
