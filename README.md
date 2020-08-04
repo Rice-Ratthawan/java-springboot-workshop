@@ -34,3 +34,4 @@
 * Improve Advantage
 * Change if to if-else
 * Introduce variables
+* Simplify True
