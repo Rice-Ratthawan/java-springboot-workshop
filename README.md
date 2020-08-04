@@ -28,8 +28,8 @@
 * TC07 => set_size_of_array **FAIL!**
 
 ### List of refactor
+* Replace Hard Code
 * Duplicate playerPoint > 0 && anotherplayerPoint ==0
 * Duplicate playerPoint > anotherplayerPoint && playerPoint < 4
 * Duplicate playerPoint > anotherplayerPoint && anotherplayerPoint >= 3
 * Duplicate playerPoint >=4 && anotherplayerPoint >=0 && (playerPoint - anotherplayerPoint)>=2
-* Use Switch instead of If
